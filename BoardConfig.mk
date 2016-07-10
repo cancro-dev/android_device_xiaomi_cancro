@@ -137,7 +137,6 @@ BOARD_FLASH_BLOCK_SIZE              := 131072
 # Recovery
 RECOVERY_FSTAB_VERSION             := 2
 TARGET_RECOVERY_FSTAB              := $(CANCRO_PATH)/rootdir/root/fstab.qcom
-TARGET_RECOVERY_PIXEL_FORMAT       := "RGBX_8888"
 TARGET_RECOVERY_LCD_BACKLIGHT_PATH := \"/sys/class/leds/lcd-backlight/brightness\"
 
 # MK Hardware
@@ -189,3 +188,5 @@ BOARD_SEPOLICY_DIRS += \
         $(CANCRO_PATH)/sepolicy
 
 -include vendor/xiaomi/cancro/BoardConfigVendor.mk
+#for multirom && twrp
+include device/xiaomi/cancro/mrom/mrom.mk

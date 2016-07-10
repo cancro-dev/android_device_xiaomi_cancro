@@ -12,9 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Boot animation
-TARGET_SCREEN_HEIGHT := 1920
-TARGET_SCREEN_WIDTH := 1080
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
@@ -23,18 +20,17 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, vendor/mk/config/common_full_phone.mk)
 
 # Inherit from cancro device
-$(call inherit-product, device/xiaomi/cancro/full_cancro.mk)
+$(call inherit-product, device/xiaomi/cancro/cancro.mk)
 
 # Enhanced NFC
 $(call inherit-product, vendor/mk/config/nfc_enhanced.mk)
 
-PRODUCT_RELEASE_NAME := XiaoMi MI 4LTE
-PRODUCT_NAME := mk_cancro
+PRODUCT_NAME := full_cancro
 PRODUCT_DEVICE := cancro
 PRODUCT_BRAND := Xiaomi
-PRODUCT_MODEL := MI Cancro
 PRODUCT_MANUFACTURER := Xiaomi
+PRODUCT_MODEL := MI Cancro
 
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME="cancro"
-PRODUCT_BUILD_PROP_OVERRIDES += BUILD_FINGERPRINT="Xiaomi/mk_cancro/aries:6.0.1/MOB30J/bb3258d9fc:eng/test-keys"
-PRODUCT_BUILD_PROP_OVERRIDES += PRIVATE_BUILD_DESC="mk_cancro-eng 6.0.1 MOB30J bb3258d9fc test-keys"
+PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+
+TARGET_CONTINUOUS_SPLASH_ENABLED := true

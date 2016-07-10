@@ -1,0 +1,13 @@
+#fstab for twrp
+#create by sndnvaps
+/system		ext4	/dev/block/platform/msm_sdcc.1/by-name/system
+/cache		ext4	/dev/block/platform/msm_sdcc.1/by-name/cache
+/cache		f2fs	/dev/block/platform/msm_sdcc.1/by-name/cache
+/data		ext4	/dev/block/platform/msm_sdcc.1/by-name/userdata
+/data		f2fs	/dev/block/platform/msm_sdcc.1/by-name/userdata
+/boot		emmc	/dev/block/platform/msm_sdcc.1/by-name/boot
+/recovery	emmc	/dev/block/platform/msm_sdcc.1/by-name/recovery
+/frp		emmc	/dev/block/bootdevice/by-name/config
+                                                           
+#/devices/platform/xhci-hcd/usb1*                    auto            auto    defaults     voldmanaged=usb:auto
+

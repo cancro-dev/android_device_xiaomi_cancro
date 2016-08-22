@@ -188,5 +188,4 @@ BOARD_SEPOLICY_DIRS += \
         $(CANCRO_PATH)/sepolicy
 
 -include vendor/xiaomi/cancro/BoardConfigVendor.mk
-#for multirom && twrp
 include device/xiaomi/cancro/mrom/mrom.mk
